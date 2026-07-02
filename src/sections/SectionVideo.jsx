@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import Section from "../components/Section.jsx";
+import { asset } from "../utils/asset.js";
 
 // "Ve Sonuç" — yazdığımız promptun video sonucu.
 // Varsayılan olarak /public/video/demo.mp4 oynatılır (önceden hazırlanmış YZ videosu).
 // Sunum sırasında videoyu CANLI değiştirmenin iki yolu:
 //   1) public/video/demo.mp4 dosyasını başka bir videoyla değiştir (kalıcı)
 //   2) Aşağıdaki "Video Yükle" / sürükle-bırak ile anında değiştir (geçici)
-const DEFAULT_SRC = "/video/demo.mp4";
+const DEFAULT_SRC = asset("video/demo.mp4");
 
 export default function SectionVideo() {
   const [src, setSrc] = useState(DEFAULT_SRC);
@@ -68,7 +69,7 @@ export default function SectionVideo() {
           loop
           playsInline
           preload="metadata"
-          poster="/photos/ai-sample-1.png"
+          poster={asset("photos/ai-sample-1.png")}
         >
           <source src={src} type="video/mp4" />
         </video>

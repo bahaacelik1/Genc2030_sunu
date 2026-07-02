@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Section from "../components/Section.jsx";
+import { asset } from "../utils/asset.js";
 
 // İnsan mı YZ mi? testi — 4 kart, tıklayıp tahmin yapılır, sonuçta skor.
 // Görseller /public/photos/ altında. Kullanıcı istediği zaman aynı dosya adlarını
@@ -8,25 +9,25 @@ import Section from "../components/Section.jsx";
 const items = [
   {
     id: "sunset",
-    src: "/photos/insan1.jpg",
+    src: asset("photos/insan1.jpg"),
     truth: "human",
     hint: "Sahilde gün batımı",
   },
   {
     id: "mountain",
-    src: "/photos/ai-sample-1.png",
+    src: asset("photos/ai-sample-1.png"),
     truth: "ai",
     hint: "Dağlarda yürüyen adam",
   },
   {
     id: "sunflower",
-    src: "/photos/insan2.jpg",
+    src: asset("photos/insan2.jpg"),
     truth: "human",
     hint: "Ayçiçekleri arasında",
   },
   {
     id: "car",
-    src: "/photos/ai-sample-2.png",
+    src: asset("photos/ai-sample-2.png"),
     truth: "ai",
     hint: "Gece bir otomobil",
   },
