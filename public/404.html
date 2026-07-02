@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yönlendiriliyor…</title>
+    <script>
+      // GitHub Pages'te derin link ya da yenileme 404'e düşerse
+      // kullanıcıyı index.html'ye yönlendir (SPA fallback).
+      var seg = location.pathname.split("/").filter(Boolean);
+      var base = seg.length ? "/" + seg[0] + "/" : "/";
+      location.replace(base);
+    </script>
+  </head>
+  <body></body>
+</html>
